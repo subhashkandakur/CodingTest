@@ -78,9 +78,9 @@ exports.countTagSpecial= async (req, res) => {
             const project = await projectController.countTagSpecial( )
      console.log(project)
             if (project) {
-                return res.send(genRes.generateResponse(true, "Remove tagging Successfully ", 200, project));
+                return res.send(genRes.generateResponse(true, "Fetched Data Successfully ", 200, project));
             } else {
-                return res.send(genRes.generateResponse(false, "Remove tagging unsuccessfully", 400,));
+                return res.send(genRes.generateResponse(false, "Fetching Data unsuccessfully", 400,));
             }
         
     } catch (error) {
